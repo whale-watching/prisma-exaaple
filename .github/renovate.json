@@ -1,0 +1,23 @@
+{
+  "extends": ["config:base", "docker:disable"],
+  "automerge": true,
+  "major": {
+    "automerge": false
+  },
+  "masterIssue": true,
+  "baseBranches": ["latest"],
+  "additionalReviewers": ["ruheni"],
+  "packageRules": [
+    {
+      "baseBranchList": ["latest"],
+      "packageNames": ["nexus-plugin-prisma"],
+      "enabled": true
+    },
+    {
+      "baseBranchList": ["latest"],
+      "packageNames": ["prisma", "@prisma/client"],
+      "enabled": true,
+      "updateTypes": ["major"]
+    }
+  ]
+}
